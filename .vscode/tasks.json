@@ -1,0 +1,38 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "shell: gcc build active file",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-v",
+				"-fPIC",
+				"${file}",
+				"-dynamiclib", 
+				"-o",
+				
+				"${fileDirname}/${fileBasenameNoExtension}.dylib",
+				
+				"-L${fileDirname}/lib", "-lan2k", "-lwsq",
+				"-lcblas","-lclapck","-lf2c","-lfet","-lfft","-lihead",
+				"-limage","-lioutil","-ljpegb","-ljpegl","-lmindtct",
+				"-lmlp","-lnfiq","-lnfseg",
+				"-lopenjp2","-lpng","-lutil","-lz",	
+
+				"-I${fileDirname}/include"
+
+			],
+			"options": {
+				"cwd": "/usr/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
