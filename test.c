@@ -32,7 +32,7 @@ int main()
         exit(EXIT_FAILURE);
     }
 
-    main_exe() ;//함수 실행
+    main_exe() ;//함수 실행 2
     
     return 0;
 
